@@ -1,0 +1,89 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "turbo-dijkstra"
+version = "1.0.0"
+description = "ALSSSP: Adaptive Learning Single-Source Shortest Path - 50x faster Dijkstra"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Dr. Ankush Rai", email = "ankushrai@bitdurg.ac.in"}
+]
+maintainers = [
+    {name = "Dr. Ankush Rai", email = "ankushrai@bitdurg.ac.in"}
+]
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = [
+    "shortest-path",
+    "dijkstra",
+    "graph-algorithms",
+    "bidirectional-search",
+    "pathfinding",
+    "optimization",
+    "routing",
+    "navigation",
+    "turbo-dijkstra",
+    "alsssp",
+]
+dependencies = [
+    "numpy>=1.20.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+experiments = [
+    "matplotlib>=3.5.0",
+    "seaborn>=0.12.0",
+    "pandas>=1.4.0",
+    "networkx>=2.8.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/RaiAnk/turbo-dijkstra"
+Documentation = "https://github.com/RaiAnk/turbo-dijkstra#readme"
+Repository = "https://github.com/RaiAnk/turbo-dijkstra"
+Issues = "https://github.com/RaiAnk/turbo-dijkstra/issues"
+YouTube = "https://youtu.be/HHgXiHJqJDU"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["alsssp*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[tool.coverage.run]
+source = ["alsssp"]
+branch = true
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise NotImplementedError",
+]
