@@ -1,6 +1,19 @@
 # ALSSSP - Adaptive Learning Single-Source Shortest Path
 
+> Also known as **Turbo-Dijkstra** — the brand name for this 50x faster shortest path algorithm.
+
 A high-performance shortest path library achieving **10-50x speedup** over standard Dijkstra for point-to-point queries through bidirectional search and adaptive learning.
+
+[![Watch the Video](https://img.shields.io/badge/YouTube-Watch%20Explanation-red?style=for-the-badge&logo=youtube)](https://youtu.be/HHgXiHJqJDU)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/RaiAnk/turbo-dijkstra)
+
+## Video Explanation
+
+**New to this project?** Watch the full explanation of how ALSSSP works and why it's 50x faster:
+
+[![ALSSSP Explained](https://img.youtube.com/vi/HHgXiHJqJDU/maxresdefault.jpg)](https://youtu.be/HHgXiHJqJDU)
+
+[Watch on YouTube: I Made Dijkstra's Algorithm 50x Faster — Here's How](https://youtu.be/HHgXiHJqJDU)
 
 ## Overview
 
@@ -29,8 +42,8 @@ ALSSSP (Adaptive Learning Single-Source Shortest Path) is a Python library that 
 ### From Source
 
 ```bash
-git clone https://github.com/example/alsssp.git
-cd alsssp
+git clone https://github.com/RaiAnk/turbo-dijkstra.git
+cd turbo-dijkstra
 pip install -e .
 ```
 
@@ -242,7 +255,7 @@ Over time, ALSSSP:
 
 ## Research Paper
 
-For technical details and experimental evaluation, see the included research paper:
+For technical details and experimental evaluation of ALSSSP, see the included research paper:
 
 - `paper/ALSSSP_paper.tex` - Full paper with proofs and experiments
 - `paper/figures/` - Experimental result visualizations
@@ -251,6 +264,8 @@ Key findings:
 - 10-50x speedup for point-to-point queries on large graphs
 - Speedup scales with sqrt(n) as predicted by theory
 - Caching provides additional 2-5x improvement for repeated queries
+
+The paper provides rigorous correctness proofs and complexity analysis for the ALSSSP framework.
 
 ## Running Experiments
 
@@ -269,13 +284,14 @@ python experiments/run_all_experiments.py
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit issues and pull requests.
+Contributions to ALSSSP are welcome! Please feel free to submit issues and pull requests.
 
 Areas for improvement:
 - GPU acceleration for large-scale graphs
 - Distributed processing for massive graphs
 - Additional algorithm portfolio members
 - Better landmark selection strategies
+- Integration with popular graph libraries (NetworkX, igraph)
 
 ## License
 
@@ -283,21 +299,31 @@ MIT License - see LICENSE file for details.
 
 ## Citation
 
-If you use ALSSSP in your research, please cite:
+If you use ALSSSP (Turbo-Dijkstra) in your research, please cite:
 
 ```bibtex
-@article{alsssp2024,
-  title={ALSSSP: Adaptive Learning Single-Source Shortest Path Algorithm},
-  author={Research Team},
-  journal={arXiv preprint},
-  year={2024}
+@article{rai2026alsssp,
+  title={ALSSSP: An Adaptive Learning Framework for Single-Source Shortest Path Computation with Provable Guarantees},
+  author={Rai, Ankush},
+  journal={ACM SIGMOD International Conference on Management of Data},
+  year={2026},
+  url={https://github.com/RaiAnk/turbo-dijkstra}
 }
 ```
 
 ## Acknowledgments
 
-This work builds on decades of research in shortest path algorithms, including:
+ALSSSP builds on decades of research in shortest path algorithms, including:
 - Dijkstra's original algorithm (1959)
 - Bidirectional search techniques
 - Delta-stepping for parallel SSSP
 - Landmark-based heuristics (ALT algorithm)
+
+## Author
+
+**Dr. Ankush Rai**
+Bhilai Institute of Technology, Durg, India
+
+---
+
+*ALSSSP (Turbo-Dijkstra) — Making shortest paths 50x faster.*
