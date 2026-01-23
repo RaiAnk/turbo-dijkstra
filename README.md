@@ -322,7 +322,6 @@ ALSSSP builds on decades of research in shortest path algorithms, including:
 ## Author
 
 **Dr. Ankush Rai**
-Bhilai Institute of Technology, Durg, India
 
 ---
 
